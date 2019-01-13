@@ -116,11 +116,12 @@ function choseWord() {
   random = Math.floor(Math.random() * 93) + 1;
   word = new Word(listOfWords[random]);
   usedLetters = {};
+  guesses = 10;
 }
 choseWord();
 
 function startGame() {
-  console.log(listOfWords[random]);
+  //console.log(listOfWords[random]);
 
   if (guesses > 0) {
     console.log(word.showWord());
@@ -137,10 +138,14 @@ function startGame() {
         var result = word.findLetter(answers.letter.toLowerCase());
         if (!result) {
           guesses--;
+          console.log("INCORRECT!");
           console.log(guesses + " guesses remaining!");
+        } else {
+          console.log("CORRECT!");
         }
         if (word.showWord().indexOf("_") === -1) {
-          console.log("Hooray! You won! Let's guess next word \n\n\n");
+          console.log(word.showWord());
+          console.log("Hooray! You won! Let's guess next word \n\n");
           choseWord();
         }
         startGame();
