@@ -1,5 +1,7 @@
 # Word-Guess-Game_CLI
 
+Here is a link to the video showing how this app works: https://drive.google.com/file/d/1i64DF9i0vJbghYiIoIZJwJpPn9xC1FJ-/edit
+
 Word Guess command-line game built using constructor functions.
 Users can guess various letters of a given word using command line input.
 Each time word is chosen randomly.
